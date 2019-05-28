@@ -29,3 +29,5 @@ Set "hst:scheme: https" on hst:root node under /hst:platform/hst:hosts/dev-local
 ```bash
 docker run -p 8443:8443 -e profile="h2" -e KEYFILE_PASSWORD="secret" org.example/myproject:0.1.0-SNAPSHOT
 ```
+
+* Visit https://localhost:8443/cms 

@@ -19,6 +19,9 @@ fi
 # update tomcat http max threads variable
 sed --in-place=.backup 's/@tomcat.max.threads@/'"$TOMCAT_MAXTHREADS"'/' /usr/local/tomcat/conf/server.xml
 
+#update TLS password
+sed --in-place=.backup 's/@keyfile.password@/'"$KEYFILE_PASSWORD"'/' /usr/local/tomcat/conf/server.xml
+
 # use the appropriate database context info for the selected database type
 cp /usr/local/tomcat/conf/context-$profile.xml /usr/local/tomcat/conf/context.xml
 
